@@ -1,8 +1,11 @@
-import 'package:lab4/lab4.dart';
-import 'dart:io';
-void main(List<String> arugements){
-	switch_demo sd = switch_demo();
-	print("enter any colour name:");
-	String colour =stdin.readLineSync()!;
-	print(sd.Scase(colour));
+class switch_demo{
+String Scase(String colour){
+	var x= (switch(colour){
+		'red'||'Red'||'RED' =>'this is red',
+		'pink'||'Pink'||'PINK' =>'this is pink',
+		'blue'||'Blue'||'BLUE' =>'this is blue',
+				_   =>'no listed',
+	});
+	return(x);
+	}
 }
